@@ -1,0 +1,36 @@
+CREATE TABLE Empresas (
+	id int(11) NOT NULL AUTO_INCREMENT,
+    nombre varchar(255) NOT NULL,
+    cif varchar(255) NOT NULL,
+	telefono int(11) NOT NULL,
+	email varchar(255) NOT NULL,
+	isActivo tinyint(1) NOT NULL DEFAULT 1,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE Mutuas (
+	id int(11) NOT NULL AUTO_INCREMENT,
+    nombre varchar(255) NOT NULL,
+    isActivo tinyint(1) NOT NULL DEFAULT 1,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE RolUsuarios (
+	id int(11) NOT NULL AUTO_INCREMENT,
+    nombre varchar(255) NOT NULL,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE Usuarios (
+	id int(11) NOT NULL AUTO_INCREMENT,
+    nombre varchar(255) NOT NULL,
+	apellido1 varchar(255) NOT NULL,
+	apellido2 varchar(255) NOT NULL,
+	username varchar(255) NOT NULL,
+	idEmpresa int(11) NOT NULL,
+	idRol int(11) NOT NULL,
+	isActivo tinyint(1) NOT NULL DEFAULT 1,
+    PRIMARY KEY (id),
+    CONSTRAINT FK_EmpresaUsuario FOREIGN KEY (idEmpresa) REFERENCES Empresas(id),
+    CONSTRAINT FK_RolUsuario FOREIGN KEY (idRol) REFERENCES RolUsuarios(id)
+);

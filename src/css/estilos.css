@@ -1,0 +1,10 @@
+body{               
+    background-image: url("/src/img/background.jpg");
+    background-repeat: no-repeat;
+}
+.jumbotron {
+    background-color: transparent;
+}
+.table{
+	background-color: white;	
+}
