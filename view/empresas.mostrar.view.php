@@ -11,11 +11,12 @@
         	$(".delete_btn").bind("click", SelectDelete);
         });
 
-    	//Functions
+    	//Functionsssss
     	function SelectDelete(event){
 
 			var idEmpresa = event.target.id;       	
-    		
+
+
     		   $.ajax({	type: 'POST',
 	    			    data:  { "empresa" : idEmpresa },
     	    		    url:   '/empresas/selectDelete/empresa/'+idEmpresa,						
