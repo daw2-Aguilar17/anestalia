@@ -1,8 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="es">
     <head>
-		<title>Empreses</title> 
-        
+		<title>Empreses</title>         
         <?php include 'mod/head.mod.php' ?>
         
         <script type="text/javascript">
@@ -15,13 +14,11 @@
     	//Functions
     	function SelectDelete(event){
 
-			var idEmpresa = event.target.id;
-        	
+			var idEmpresa = event.target.id;       	
     		
     		   $.ajax({	type: 'POST',
 	    			    data:  { "empresa" : idEmpresa },
-    	    		    url:   '/empresas/selectDelete/empresa/'+idEmpresa,
-						
+    	    		    url:   '/empresas/selectDelete/empresa/'+idEmpresa,						
 						
     			   	  	beforeSend: function () {
 	                      	alert('beforeSend');
