@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="es">
+<html lang="en">
     <head>
 		<title>Empreses</title>         
         <?php include 'mod/head.mod.php' ?>
