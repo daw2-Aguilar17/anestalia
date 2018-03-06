@@ -11,7 +11,7 @@
         	$(".delete_btn").bind("click", SelectDelete);
         });
 
-    	//Functionssssssss
+    	//Functionsssssssssss
     	function SelectDelete(event){
 
 			var idEmpresa = event.target.id;       	
